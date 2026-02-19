@@ -1,0 +1,28 @@
+/* ═══════════════════════════════════════════════
+   css/variables.css
+   Design tokens — edit here to retheme the site
+   ═══════════════════════════════════════════════ */
+
+:root {
+  /* Brand colours */
+  --blue-deep:    #0a1628;
+  --blue-mid:     #0d3b7a;
+  --blue-accent:  #1565C0;
+  --blue-bright:  #2196F3;
+  --blue-light:   #64B5F6;
+  --gold:         #C9A84C;
+
+  /* Neutrals */
+  --white:        #FAFAFA;
+  --gray-light:   #f0f4f8;
+  --gray-mid:     #8899aa;
+  --text-dark:    #0a1628;
+
+  /* Motion */
+  --transition:   all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Typography */
+  --font-heading: 'Bebas Neue', cursive;
+  --font-body:    'DM Sans', sans-serif;
+  --font-italic:  'Playfair Display', serif;
+}

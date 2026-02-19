@@ -1,0 +1,9 @@
+Place team member photos here.
+
+Recommended:
+- Size: 400×400px square
+- Format: .jpg or .webp
+
+To use, replace the .team-avatar letter divs in index.html
+with <img> tags pointing to these files, e.g.:
+  <img src="images/team/ceo.jpg" alt="Simbarashe Owen Mugayi" class="team-avatar-img">

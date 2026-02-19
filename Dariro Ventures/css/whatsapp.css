@@ -1,0 +1,61 @@
+/* ═══════════════════════════════════════════════
+   css/whatsapp.css
+   Floating WhatsApp chat button
+   ═══════════════════════════════════════════════ */
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  z-index: 900;
+  width: 58px; height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 30px rgba(37,211,102,0.5);
+  text-decoration: none;
+  transition: var(--transition);
+  animation: float 3s ease-in-out infinite;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 12px 40px rgba(37,211,102,0.6);
+  animation: none; /* stop float on hover */
+}
+
+/* Tooltip label */
+.whatsapp-tooltip {
+  position: absolute;
+  right: 68px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #1a1a1a;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  font-family: var(--font-body);
+}
+
+/* Small arrow on tooltip */
+.whatsapp-tooltip::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 6px solid transparent;
+  border-left-color: #1a1a1a;
+  border-right: none;
+}
+
+.whatsapp-btn:hover .whatsapp-tooltip {
+  opacity: 1;
+}

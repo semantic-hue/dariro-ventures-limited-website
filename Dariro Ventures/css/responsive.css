@@ -1,0 +1,106 @@
+/* ═══════════════════════════════════════════════
+   css/responsive.css
+   Mobile-first breakpoints
+   ═══════════════════════════════════════════════ */
+
+/* ── Tablet & below (≤ 900px) ── */
+@media (max-width: 900px) {
+
+  /* Nav: collapse to hamburger */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 72px; left: 0;
+    width: 100%;
+    background: rgba(10,22,40,0.98);
+    padding: 24px 5%;
+    gap: 20px;
+    z-index: 999;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
+  .hero-stats {
+    position: static;
+    margin-top: 48px;
+    flex-wrap: wrap;
+    gap: 28px;
+  }
+
+  /* Booking form */
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .form-group.full {
+    grid-column: span 2;
+  }
+
+  /* Two-column grids → single column */
+  .why-grid       { grid-template-columns: 1fr; }
+  .about-grid     { grid-template-columns: 1fr; }
+  .contact-grid   { grid-template-columns: 1fr; }
+  .footer-grid    { grid-template-columns: 1fr 1fr; }
+}
+
+/* ── Mobile (≤ 600px) ── */
+@media (max-width: 600px) {
+
+  section {
+    padding: 72px 5%;
+  }
+
+  /* Booking form: single column */
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-group.full,
+  .form-group.half {
+    grid-column: span 1;
+  }
+  .booking-form {
+    padding: 28px 20px;
+  }
+
+  /* Other grids */
+  .values-grid              { grid-template-columns: 1fr; }
+  .contact-form-row         { grid-template-columns: 1fr; }
+  .footer-grid              { grid-template-columns: 1fr; }
+  .why-visual               { grid-template-columns: 1fr; }
+  .why-stat-card:first-child{ grid-column: span 1; }
+
+  /* Hero stats horizontal scroll */
+  .hero-stats {
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  /* Footer bottom: stack */
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* About card padding */
+  .about-card {
+    padding: 28px 20px;
+  }
+
+  /* Contact form wrap */
+  .contact-form-wrap {
+    padding: 28px 20px;
+  }
+}

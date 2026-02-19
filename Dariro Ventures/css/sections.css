@@ -1,0 +1,26 @@
+/* ═══════════════════════════════════════════════
+   css/sections.css
+   Shared section-level overrides
+   ═══════════════════════════════════════════════ */
+
+/* Alternate section backgrounds */
+#services    { background: var(--gray-light); }
+#fleet       { background: var(--white); }
+#why         { background: var(--blue-deep); color: white; }
+#about       { background: var(--gray-light); }
+#book        { background: linear-gradient(160deg, var(--blue-deep) 0%, #0d3b7a 100%); color: white; }
+#testimonials{ background: var(--white); }
+#contact     { background: var(--gray-light); }
+
+/* Dark-bg section title/sub overrides */
+#why   .section-title,
+#book  .section-title { color: white; }
+
+#why  .section-sub,
+#book .section-sub  { color: rgba(255,255,255,0.6); }
+
+#why  .section-label,
+#book .section-label { color: var(--blue-light); }
+
+#why  .section-label::before,
+#book .section-label::before { background: var(--blue-light); }

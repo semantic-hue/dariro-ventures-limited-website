@@ -1,0 +1,18 @@
+Place your vehicle photos here.
+
+Recommended image sizes:
+- Width:  800px minimum
+- Height: 500px minimum
+- Format: .jpg or .webp (webp is smaller/faster)
+
+Naming convention used in js/data.js:
+- sedan.jpg
+- van.jpg
+- hilux.jpg  (4x4)
+- fortuner.jpg (suv)
+- executive.jpg
+- bus.jpg
+
+To use local images instead of URLs, update the "image" field
+in js/data.js from the URL to a relative path, e.g.:
+  image: 'images/vehicles/sedan.jpg'
