@@ -284,127 +284,74 @@
     <p class="section-sub">Fill in the form and our team will confirm your booking within 2 hours. Fast, simple, reliable.</p>
 
     <div class="booking-form reveal">
-      <form id="bookingForm">
-        <div class="form-grid">
-          <div class="form-group">
-            <label>Full Name</label>
-            <input type="text" id="name" placeholder="John Banda" required>
-          </div>
-          <div class="form-group">
-            <label>Phone Number</label>
-            <input type="tel" id="phone" placeholder="+260 9XX XXX XXX" required>
-          </div>
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" id="email" placeholder="john@example.com" required>
-          </div>
-          <div class="form-group">
-            <label>Vehicle Category</label>
-            <select id="vehicle" required>
-              <option value="">Select category...</option>
-              <option>Group A - Sedan (Budget)</option>
-              <option>Group B - Mini Van</option>
-              <option>Group C/D - 4×4 Double Cab</option>
-              <option>Group E - SUV</option>
-              <option>Group F - Executive</option>
-              <option>Group H/I - Bus / Minibus</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Pick-Up Date</label>
-            <input type="date" id="pickup" required>
-          </div>
-          <div class="form-group">
-            <label>Return Date</label>
-            <input type="date" id="return" required>
-          </div>
-          <div class="form-group">
-            <label>Pick-Up Location</label>
-            <input type="text" id="location" placeholder="Lusaka City Centre, Airport, etc.">
-          </div>
-          <div class="form-group">
-            <label>Rental Period</label>
-            <select id="period">
-              <option>Daily (24hrs)</option>
-              <option>3-Day Package</option>
-              <option>Weekly</option>
-              <option>Monthly</option>
-              <option>Yearly / Long-Term</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Payment Method</label>
-            <select id="payment">
-              <option>Bank Transfer (FNB)</option>
-              <option>Mobile Money</option>
-              <option>eWallet</option>
-              <option>Cash on Delivery</option>
-            </select>
-          </div>
-          <div class="form-group full">
-            <label>Special Requirements</label>
-            <textarea id="requirements" placeholder="Driver required? Baby seat? Airport pickup? Tell us anything..."></textarea>
-          </div>
-        </div>
-        <div class="form-submit">
-          <button type="submit" class="btn-primary">📩 Submit Booking Request</button>
-          <p>Our team will confirm within 2 hours via phone or WhatsApp</p>
-        </div>
-        <div class="success-msg" id="bookSuccess">
-          ✅ Booking request received! We'll contact you shortly via phone or WhatsApp to confirm.
-        </div>
-      </form>
-
-     <iframe name="hidden_iframe" style="display:none;"></iframe>
-
-      
-<script>
-document.getElementById("bookingForm").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  const url = "https://docs.google.com/forms/d/e/1FAIpQLSe9J-Ga45eRtc_mc6ecUNXzlnMkB8p8lRQmC6NxergMZfDETg/formResponse";
-
-  const fd = new FormData();
-
-  // TEXT
-  fd.append("entry.951343961", document.getElementById("name").value);
-  fd.append("entry.1497061659", document.getElementById("phone").value);
-  fd.append("entry.1548613876", document.getElementById("email").value);
-  fd.append("entry.280057155", document.getElementById("location").value);
-   fd.append("entry.2134755833", document.getElementById("payment").value);
-    fd.append("entry.1387639728", document.getElementById("requirements").value);
-   
-
-  // DROPDOWNS
-  fd.append("entry.582496269", document.getElementById("vehicle").value);
-  fd.append("entry.1878013723", document.getElementById("period").value);
-  
-// Pickup date
-let p = document.getElementById("pickup").value.split("-");
-fd.append("entry.189124574_year",  p[0]);
-fd.append("entry.189124574_month", parseInt(p[1]).toString()); // removes leading zero
-fd.append("entry.189124574_day",   parseInt(p[2]).toString()); // removes leading zero
-
-// Return date
-let r = document.getElementById("return").value.split("-");
-fd.append("entry.1050904965_year",  r[0]);
-fd.append("entry.1050904965_month", parseInt(r[1]).toString()); // removes leading zero
-fd.append("entry.1050904965_day",   parseInt(r[2]).toString()); // removes leading zero
-  
-console.log([...fd.entries()]);
-
-  fetch(url, {
-    method: "POST",
-    mode: "no-cors",
-    body: fd
-  });
-
-  alert("Booking sent successfully!");
-  document.getElementById("bookingForm").reset();
-});
-</script>
-
-
+     <form name="booking" method="POST" data-netlify="true" action="/thank-you.html">
+  <input type="hidden" name="form-name" value="booking" />
+  <div class="form-grid">
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" name="name" placeholder="John Banda" required>
+    </div>
+    <div class="form-group">
+      <label>Phone Number</label>
+      <input type="tel" name="phone" placeholder="+260 9XX XXX XXX" required>
+    </div>
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" name="email" placeholder="john@example.com" required>
+    </div>
+    <div class="form-group">
+      <label>Vehicle Category</label>
+      <select name="vehicle" required>
+        <option value="">Select category...</option>
+        <option>Group A - Sedan (Budget)</option>
+        <option>Group B - Mini Van</option>
+        <option>Group C/D - 4×4 Double Cab</option>
+        <option>Group E - SUV</option>
+        <option>Group F - Executive</option>
+        <option>Group H/I - Bus / Minibus</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Pick-Up Date</label>
+      <input type="date" name="pickup" required>
+    </div>
+    <div class="form-group">
+      <label>Return Date</label>
+      <input type="date" name="return" required>
+    </div>
+    <div class="form-group">
+      <label>Pick-Up Location</label>
+      <input type="text" name="location" placeholder="Lusaka City Centre, Airport, etc.">
+    </div>
+    <div class="form-group">
+      <label>Rental Period</label>
+      <select name="period">
+        <option>Daily (24hrs)</option>
+        <option>3-Day Package</option>
+        <option>Weekly</option>
+        <option>Monthly</option>
+        <option>Yearly / Long-Term</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Payment Method</label>
+      <select name="payment">
+        <option>Bank Transfer (FNB)</option>
+        <option>Mobile Money</option>
+        <option>eWallet</option>
+        <option>Cash on Delivery</option>
+      </select>
+    </div>
+    <div class="form-group full">
+      <label>Special Requirements</label>
+      <textarea name="requirements" placeholder="Driver required? Baby seat? Airport pickup? Tell us anything..."></textarea>
+    </div>
+  </div>
+  <div class="form-submit">
+    <button type="submit" class="btn-primary">📩 Submit Booking Request</button>
+    <p>Our team will confirm within 2 hours via phone or WhatsApp</p>
+  </div>
+</form>          
     </div>
   </section>
 
