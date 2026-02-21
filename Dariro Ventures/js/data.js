@@ -22,7 +22,7 @@ const vehicles = [
     category:   'van',
     badge:      'badge-van',
     label:      'VAN',
-    image:      'Dariro Ventures/images/vehicles/serano.jpg',
+    image:      'images/vehicles/serano.jpg',
     name:       'Nissan Elgrand or similar',
     spec:       '3.5L Automatic',
     passengers: 7,
