@@ -111,17 +111,6 @@ function submitBooking(e) {
 }
 
 /* ── CONTACT FORM ── */
-function submitContact(e) {
-  e.preventDefault();
-  const form = e.target;
-
-  const data = {
-    name:        form.name.value,
-    phone:       form.phone.value,
-    email:       form.email.value,
-    enquiryType: form.enquiryType.value,
-    message:     form.message.value,
-  };
 
   // ── Option A: EmailJS ──
   /*
@@ -140,7 +129,5 @@ function submitContact(e) {
   */
 
   // ── Default ──
-  console.log('Contact data:', data);
-  showSuccess('contactSuccess');
-  form.reset();
-}
+  
+
