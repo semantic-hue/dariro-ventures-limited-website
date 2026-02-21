@@ -31,36 +31,16 @@ nav.scrolled {
   text-decoration: none;
 }
 
-.nav-logo-icon {
-  width: 42px; height: 42px;
-  background: linear-gradient(135deg, var(--blue-bright), var(--blue-mid));
-  border-radius: 50%;
+.nav-logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
-  color: white;
-  font-size: 18px;
-  letter-spacing: 1px;
-  box-shadow: 0 0 20px rgba(33,150,243,0.4);
-  flex-shrink: 0;
+  text-decoration: none;
 }
 
-.nav-logo-text {
-  color: white;
-}
-.nav-logo-text strong {
-  display: block;
-  font-family: var(--font-heading);
-  font-size: 18px;
-  letter-spacing: 2px;
-  line-height: 1;
-}
-.nav-logo-text span {
-  font-size: 10px;
-  color: var(--blue-light);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+.nav-logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* Nav links */
