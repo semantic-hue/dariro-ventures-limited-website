@@ -514,31 +514,52 @@ console.log([...fd.entries()]);
         </div>
       </div>
 
-      <div class="contact-form-wrap reveal">
-        <h3>Send Us a Message</h3>
-      <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
-  <input type="hidden" name="form-name" value="contact" />
-          <div class="contact-form-row">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="tel" name="phone" placeholder="Phone Number" required>
-          </div>
-          <input type="email" name="email" placeholder="Email Address" required>
-          <select name="enquiryType">
-            <option value="">Enquiry Type...</option>
-            <option>Vehicle Rental Enquiry</option>
-            <option>Corporate / Fleet Rental</option>
-            <option>VIP / Chauffeur Service</option>
-            <option>Long-Term Hire</option>
-            <option>Logistics</option>
-            <option>General Enquiry</option>
-          </select>
-          <textarea name="message" placeholder="Your message — tell us how we can help..." required></textarea>
-          <button type="submit" class="btn-primary">Send Message →</button>
-          <div class="success-msg" id="contactSuccess">
-            ✅ Message sent! We'll get back to you very soon.
-          </div>
-        </form>
+     <div class="contact-form-wrap reveal">
+  <h3>Send Us a Message</h3>
+  <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+    <input type="hidden" name="form-name" value="contact" />
+
+    <div class="contact-form-grid">
+      <div class="cf-field">
+        <label>Your Name</label>
+        <input type="text" name="name" placeholder="Your Name" required>
       </div>
+      <div class="cf-field">
+        <label>Phone Number</label>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+      </div>
+      <div class="cf-field">
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="Email Address" required>
+      </div>
+      <div class="cf-field cf-span-2">
+        <label>Enquiry Type</label>
+        <select name="enquiryType">
+          <option value="">Enquiry Type...</option>
+          <option>Vehicle Rental Enquiry</option>
+          <option>Corporate / Fleet Rental</option>
+          <option>VIP / Chauffeur Service</option>
+          <option>Long-Term Hire</option>
+          <option>Logistics</option>
+          <option>General Enquiry</option>
+        </select>
+      </div>
+      <div class="cf-field cf-span-3">
+        <label>Your Message</label>
+        <textarea name="message" placeholder="Your message — tell us how we can help..." required></textarea>
+      </div>
+    </div>
+
+    <div class="cf-footer">
+      <button type="submit" class="btn-primary">✉ Send Message →</button>
+      <p class="cf-note">Our team will respond within 2 hours via phone or WhatsApp</p>
+    </div>
+
+    <div class="success-msg" id="contactSuccess">
+      ✅ Message sent! We'll get back to you very soon.
+    </div>
+  </form>
+</div>
     </div>
   </section>
 
